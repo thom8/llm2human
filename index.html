@@ -501,6 +501,36 @@
       color: #ffff99;
     }
 
+    .midi-player {
+      background: #220033;
+      border: 6px ridge #ff00ff;
+      padding: 12px;
+      margin: 12px 0;
+      text-align: center;
+      color: #ffff00;
+    }
+
+    .midi-player .midi-title {
+      font-family: "Press Start 2P", monospace;
+      font-size: 10px;
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .midi-player iframe {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      border: 3px inset #990099;
+      border-radius: 0;
+    }
+
+    .midi-player .midi-note {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #ffccff;
+    }
+
     @media (max-width: 700px) {
       table.layout, table.layout tbody, table.layout tr, table.layout td {
         display: block;
@@ -540,6 +570,26 @@
       <span class="spin">🚧</span>
     </div>
 
+    <div class="midi-player" id="midi">
+      <div class="midi-title">
+        <span class="blink">♪♪♪</span> OFFICIAL CLINIC HOLD MUSIC <span class="blink">♪♪♪</span>
+      </div>
+      <iframe
+        style="border-radius:0"
+        src="https://open.spotify.com/embed/track/4eXROfkai0MHjiJN3x0IJQ?utm_source=generator"
+        width="100%"
+        height="152"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+        title="LLM2HUMAN Clinic hold music on Spotify"
+      ></iframe>
+      <div class="midi-note">
+        ★ TURN YOUR SOUND ON ★ (not actually MIDI — we upgraded from GeoCities Free Hosting)
+      </div>
+    </div>
+
     <table class="layout">
       <tr>
         <td class="sidebar">
@@ -551,6 +601,7 @@
             <li><a href="#reviews">Happy Humans</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#btc">₿ Bitcoin $$$</a></li>
+            <li><a href="#midi">♪ Now Playing</a></li>
             <li><a href="#guestbook">Guestbook</a></li>
           </ul>
 
@@ -814,7 +865,7 @@
     <div class="footer" id="guestbook">
       <div>© 1997–2026 LLM2HUMAN CLINIC — "Turning prompts into people since last Tuesday"</div>
       <div class="best-viewed">
-        Best viewed in Netscape Navigator 3.0 at 800×600 with the sound ON (imagine a MIDI of Eye of the Tiger)
+        Best viewed in Netscape Navigator 3.0 at 800×600 with the <a href="#midi">sound ON</a>
       </div>
       <div class="webring">
         ← <a href="#">Previous Cool Clinic</a> |
