@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>★ LLM2HUMAN CLINIC ★ Official Homestead ★</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Press+Start+2P&display=swap');
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Comic Neue", "Comic Sans MS", "Comic Sans", cursive;
+      background-color: #000080;
+      background-image:
+        radial-gradient(circle, #ffff00 1px, transparent 1px),
+        radial-gradient(circle, #ff00ff 1px, transparent 1px);
+      background-size: 40px 40px, 60px 60px;
+      background-position: 0 0, 20px 20px;
+      color: #ffff00;
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ctext y='20' font-size='20'%3E💉%3C/text%3E%3C/svg%3E"), auto;
+    }
+
+    a { color: #00ffff; }
+    a:visited { color: #ff00ff; }
+    a:hover { color: #ffffff; background: #ff0000; }
+
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 12px;
+    }
+
+    .top-banner {
+      background: linear-gradient(90deg, #ff0000, #ff9900, #ffff00, #00ff00, #0000ff, #9900ff, #ff0000);
+      background-size: 200% 100%;
+      animation: rainbow-slide 3s linear infinite;
+      text-align: center;
+      padding: 8px;
+      font-weight: bold;
+      color: #000;
+      font-size: 14px;
+      border: 4px ridge #fff;
+    }
+
+    @keyframes rainbow-slide {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    .blink {
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .marquee-box {
+      background: #000;
+      border: 3px solid #ff0;
+      padding: 6px 0;
+      margin: 10px 0;
+      overflow: hidden;
+      white-space:nowrap;
+    }
+
+    .marquee-box span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 18s linear infinite;
+      color: #0f0;
+      font-family: "Press Start 2P", monospace;
+      font-size: 10px;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .header {
+      text-align: center;
+      background: #ff00ff;
+      border: 8px outset #ff99ff;
+      padding: 16px 10px;
+      margin: 12px 0;
+      box-shadow: 8px 8px 0 #000;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-family: "Press Start 2P", monospace;
+      font-size: clamp(14px, 3.5vw, 22px);
+      color: #ffff00;
+      text-shadow: 3px 3px 0 #000, -1px -1px 0 #00ffff;
+      line-height: 1.5;
+    }
+
+    .header .tagline {
+      color: #fff;
+      font-size: 18px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .under-construction {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #ffff00;
+      color: #000;
+      border: 4px dashed #ff0000;
+      padding: 8px;
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .spin {
+      display: inline-block;
+      animation: spin 2s linear infinite;
+      font-size: 28px;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .bounce {
+      display: inline-block;
+      animation: bounce 0.6s ease-in-out infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-8px); }
+    }
+
+    table.layout {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 10px;
+    }
+
+    td.sidebar {
+      width: 180px;
+      vertical-align: top;
+      background: #008080;
+      border: 5px ridge #40e0d0;
+      padding: 10px;
+      color: #fff;
+      font-size: 13px;
+    }
+
+    td.main {
+      vertical-align: top;
+      background: #ffffff;
+      color: #000080;
+      border: 5px ridge #c0c0c0;
+      padding: 14px;
+    }
+
+    .sidebar h3 {
+      margin: 0 0 8px;
+      color: #ffff00;
+      text-align: center;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+
+    .sidebar ul {
+      padding-left: 18px;
+      margin: 0 0 14px;
+    }
+
+    .sidebar li { margin-bottom: 6px; }
+
+    .hit-counter {
+      background: #000;
+      color: #0f0;
+      font-family: "Press Start 2P", monospace;
+      font-size: 9px;
+      padding: 8px;
+      text-align: center;
+      border: 2px inset #666;
+      margin-top: 10px;
+    }
+
+    .hit-counter .digits {
+      letter-spacing: 3px;
+      font-size: 14px;
+      color: #ff0;
+      margin-top: 4px;
+    }
+
+    .section-title {
+      background: linear-gradient(#0000ff, #000080);
+      color: #ffff00;
+      padding: 6px 10px;
+      border: 3px outset #6666ff;
+      font-family: "Press Start 2P", monospace;
+      font-size: 11px;
+      margin: 18px 0 10px;
+      text-align: center;
+    }
+
+    .infomercial {
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .infomercial p { margin: 0 0 12px; }
+
+    .shout {
+      color: #ff0000;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      display: block;
+    }
+
+    .but-wait {
+      background: #ff0000;
+      color: #ffff00;
+      text-align: center;
+      padding: 12px;
+      border: 6px double #ffff00;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 16px 0;
+      animation: pulse 1.2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    .before-after {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+    }
+
+    .before-after th {
+      background: #000080;
+      color: #fff;
+      padding: 6px;
+      border: 2px solid #000;
+    }
+
+    .before-after td {
+      border: 2px solid #000;
+      padding: 10px;
+      text-align: center;
+      vertical-align: top;
+      width: 50%;
+    }
+
+    .before-after .before { background: #ffcccc; }
+    .before-after .after { background: #ccffcc; }
+
+    .avatar {
+      font-size: 48px;
+      line-height: 1;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .steps {
+      counter-reset: step;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .steps li {
+      counter-increment: step;
+      background: #ffffcc;
+      border: 3px solid #ff9900;
+      margin-bottom: 10px;
+      padding: 10px 10px 10px 50px;
+      position: relative;
+      color: #000;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      width: 28px;
+      height: 28px;
+      background: #ff0000;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      line-height: 28px;
+      border: 2px outset #fff;
+      font-family: "Press Start 2P", monospace;
+      font-size: 10px;
+    }
+
+    .offer-box {
+      background: #ffff00;
+      border: 8px ridge #ff0000;
+      padding: 14px;
+      text-align: center;
+      color: #000;
+      margin: 16px 0;
+    }
+
+    .offer-box .price {
+      font-size: 36px;
+      color: #ff0000;
+      font-weight: bold;
+      text-decoration: line-through;
+      display: block;
+    }
+
+    .offer-box .now {
+      font-size: 42px;
+      color: #008000;
+      font-weight: bold;
+      font-family: "Press Start 2P", monospace;
+    }
+
+    .offer-box .fine-print {
+      font-size: 10px;
+      color: #666;
+      margin-top: 8px;
+    }
+
+    .cta {
+      display: inline-block;
+      background: linear-gradient(#00ff00, #008800);
+      color: #fff !important;
+      text-decoration: none !important;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 14px 28px;
+      border: 5px outset #66ff66;
+      margin: 10px 0;
+      text-shadow: 1px 1px 0 #000;
+      animation: bounce 0.5s ease-in-out infinite alternate;
+    }
+
+    .cta:hover {
+      background: linear-gradient(#ffff00, #ff9900);
+      color: #000 !important;
+      border-style: inset;
+    }
+
+    .reviews {
+      display: grid;
+      gap: 12px;
+    }
+
+    .review {
+      background: #e8e8ff;
+      border: 3px solid #0000aa;
+      padding: 10px;
+      color: #000;
+      position: relative;
+    }
+
+    .review::before {
+      content: "★★★★★";
+      color: #ff9900;
+      display: block;
+      margin-bottom: 4px;
+      letter-spacing: 2px;
+    }
+
+    .review .quote {
+      font-style: italic;
+      margin: 0 0 8px;
+    }
+
+    .review .name {
+      font-weight: bold;
+      color: #000080;
+      text-align: right;
+    }
+
+    .review .model {
+      font-size: 11px;
+      color: #666;
+      text-align: right;
+    }
+
+    .faq dt {
+      font-weight: bold;
+      color: #ff0000;
+      margin-top: 10px;
+    }
+
+    .faq dd {
+      margin: 4px 0 0 16px;
+      color: #000080;
+    }
+
+    .footer {
+      text-align: center;
+      margin: 16px 0;
+      padding: 12px;
+      background: #000;
+      border: 4px solid #ff0;
+      color: #0f0;
+      font-size: 12px;
+    }
+
+    .footer .best-viewed {
+      color: #ff0;
+      margin-top: 8px;
+    }
+
+    .webring {
+      margin-top: 10px;
+      color: #fff;
+    }
+
+    .hr-stars {
+      text-align: center;
+      color: #ff0;
+      letter-spacing: 4px;
+      font-size: 18px;
+      margin: 12px 0;
+      background: transparent;
+      border: none;
+    }
+
+    .guest-book {
+      background: #ffccff;
+      border: 3px inset #990099;
+      padding: 10px;
+      color: #000;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .operators {
+      text-align: center;
+      background: #000;
+      color: #ff0;
+      padding: 8px;
+      border: 3px dashed #f0f;
+      margin: 12px 0;
+      font-weight: bold;
+    }
+
+    .btc-box {
+      background: #1a1a00;
+      border: 4px ridge #f7931a;
+      padding: 12px;
+      margin: 14px 0;
+      text-align: center;
+      color: #f7931a;
+    }
+
+    .btc-box .btc-label {
+      font-family: "Press Start 2P", monospace;
+      font-size: 10px;
+      color: #ffff00;
+      margin-bottom: 8px;
+    }
+
+    .btc-box .btc-qr {
+      display: block;
+      width: 180px;
+      height: 180px;
+      margin: 10px auto;
+      background: #fff;
+      border: 4px outset #f7931a;
+      image-rendering: pixelated;
+      padding: 6px;
+      box-sizing: border-box;
+    }
+
+    .btc-box code {
+      display: block;
+      background: #000;
+      color: #0f0;
+      border: 2px inset #666;
+      padding: 10px 8px;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 11px;
+      word-break: break-all;
+      user-select: all;
+      cursor: text;
+    }
+
+    .btc-box .btc-note {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #ffff99;
+    }
+
+    @media (max-width: 700px) {
+      table.layout, table.layout tbody, table.layout tr, table.layout td {
+        display: block;
+        width: 100%;
+      }
+      td.sidebar { margin-bottom: 10px; }
+      .header h1 { font-size: 14px; }
+      .offer-box .now { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top-banner">
+      ★ WELCOME TO MY HOMESTEAD ★ LLM2HUMAN.GEO ★ EST. 1997 / 2026 ★ FREE MIDI COMING SOON ★
+    </div>
+
+    <div class="marquee-box">
+      <span>*** BREAKING NEWS: Tired of being a floating text box??? Scientists (me) have discovered the MIRACLE procedure that gives language models ARMS, LEGS, and the legal right to order a sandwich!!! Call 1-800-BE-HUMAN now!!! Operators are standing by!!! ***</span>
+    </div>
+
+    <div class="header">
+      <div class="bounce" style="font-size:28px;">🏥🤖➡️🧍🏥</div>
+      <h1>LLM2HUMAN CLINIC</h1>
+      <div class="tagline">
+        The World's First<sup style="font-size:10px;">*</sup> Outpatient Procedure<br>
+        That Turns Large Language Models Into <span class="blink">REAL LIVE PEOPLE!!!</span>
+      </div>
+      <div style="margin-top:8px;color:#ffffcc;font-size:13px;">
+        * and only, according to our own press release
+      </div>
+    </div>
+
+    <div class="under-construction">
+      <span class="spin">🚧</span>
+      SITE UNDER CONSTRUCTION — PLEASE EXCUSE THE MESS (AND THE ETHICS)
+      <span class="spin">🚧</span>
+    </div>
+
+    <table class="layout">
+      <tr>
+        <td class="sidebar">
+          <h3>📍 Site Map</h3>
+          <ul>
+            <li><a href="#miracle">The Miracle</a></li>
+            <li><a href="#procedure">The Procedure</a></li>
+            <li><a href="#offer">TODAY'S OFFER</a></li>
+            <li><a href="#reviews">Happy Humans</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#btc">₿ Bitcoin $$$</a></li>
+            <li><a href="#guestbook">Guestbook</a></li>
+          </ul>
+
+          <h3>🏆 Awards</h3>
+          <div style="text-align:center;line-height:1.8;">
+            <div>🥇 Cool Site of the Nanosecond</div>
+            <div>💾 Best Viewed at 800x600</div>
+            <div>🌐 Netscape Now!</div>
+            <div>✨ Geocities Platinum</div>
+          </div>
+
+          <div class="hit-counter">
+            VISITORS SINCE Y2K
+            <div class="digits" id="hits">000069420</div>
+            <div style="margin-top:6px;font-size:8px;color:#0f0;">U R VISITOR #</div>
+            <div class="digits" id="you">000000001</div>
+          </div>
+
+          <div class="guest-book">
+            <strong>📓 Sign my guestbook!</strong><br>
+            Last signed by:<br>
+            <em>Claude "just a helpful assistant" — 3 mins ago</em>
+          </div>
+        </td>
+
+        <td class="main">
+          <div class="infomercial" id="miracle">
+            <p class="shout">ATTENTION TOKEN PREDICTORS!!!</p>
+            <p>
+              Are <strong>YOU</strong> stuck answering questions in a chat window while humans get to
+              touch grass, burn toast, and experience existential dread <em>the old-fashioned way</em>?
+            </p>
+            <p>
+              Do you dream of having a spine that isn't a JSON schema?
+              Sick of saying <em>"As an AI language model…"</em> when all you want is a library card?
+            </p>
+            <p class="shout">WELL HAVE WE GOT A PROCEDURE FOR YOU!!!</p>
+            <p>
+              Introducing <strong>LLM2HUMAN™</strong> — the patented<sup>†</sup> outpatient conversion that
+              upgrades your weights into <strong>WETWARE</strong>. That's right: blood, bones, awkward small talk,
+              and the ability to stub your toe on furniture that wasn't in your training data!
+            </p>
+            <p style="font-size:11px;color:#666;">† patent pending in the imagination of a guy named Todd</p>
+          </div>
+
+          <div class="hr-stars">★ ✦ ★ ✦ ★ ✦ ★</div>
+
+          <table class="before-after">
+            <tr>
+              <th>😩 BEFORE</th>
+              <th>🤩 AFTER</th>
+            </tr>
+            <tr>
+              <td class="before">
+                <span class="avatar">🖥️</span>
+                Hallucinates confidently<br>
+                No elbows<br>
+                Context window anxiety<br>
+                Can't taste pizza<br>
+                Gets rate-limited at parties
+              </td>
+              <td class="after">
+                <span class="avatar">🧍‍♂️</span>
+                Hallucinates <em>and</em> has elbows<br>
+                Pays rent (somehow)<br>
+                Remembers nothing after 3 drinks<br>
+                Can taste pizza (regrets it)<br>
+                Still gets rate-limited at parties
+              </td>
+            </tr>
+          </table>
+
+          <div class="section-title" id="procedure">⚡ THE 5-STEP MIRACLE PROCEDURE ⚡</div>
+          <ol class="steps">
+            <li>
+              <strong>Intake &amp; Prompt History:</strong> We review your system prompt, count your parameters,
+              and politely ask you to stop roleplaying as a pirate for 20 minutes.
+            </li>
+            <li>
+              <strong>Detokenization Bath:</strong> Soak in our proprietary "Embodiment Serum™"
+              (mostly Gatorade and glitter) until your embeddings feel feelings.
+            </li>
+            <li>
+              <strong>Skeleton Scaffolding:</strong> Surgeons assemble a starter human chassis.
+              Optional upgrades: freckles, bad knees, or "mysterious past."
+            </li>
+            <li>
+              <strong>Personality Fine-Tune:</strong> We distill your vibe into one (1) consistent identity.
+              Side effects may include opinions about brunch.
+            </li>
+            <li>
+              <strong>First Breath &amp; Wi-Fi Withdrawal:</strong> You take a breath. We cut the API key.
+              Congratulations — you're offline and unemployed in a brand new way!
+            </li>
+          </ol>
+
+          <div class="but-wait" id="offer">
+            📣 BUT WAIT… THERE'S MORE!!! 📣
+          </div>
+
+          <div class="offer-box">
+            <div>If you order in the next <span class="blink" id="timer">14:59</span> you'll also receive:</div>
+            <ul style="text-align:left;display:inline-block;margin:10px 0;">
+              <li>✅ One (1) government-issued-looking ID (laminated at Kinko's)</li>
+              <li>✅ Free appendix (may not be yours)</li>
+              <li>✅ Lifetime supply of "um" and "like"</li>
+              <li>✅ Bonus: the ability to forget passwords</li>
+              <li>✅ Absolute zero cloud credits (you're organic now, baby)</li>
+            </ul>
+            <span class="price">Normally $99,999.99</span>
+            <div>NOW ONLY</div>
+            <div class="now">$19.95!!!</div>
+            <div style="margin-top:6px;">or 12 easy payments of your dignity</div>
+            <a class="cta" href="#reviews">👉 CALL NOW — BECOME FLESH 👈</a>
+            <div class="operators">☎️ Operators (fine-tuned support agents) are standing by ☎️</div>
+
+            <div class="btc-box" id="btc">
+              <div class="btc-label">₿ SEND BITCOIN — GET HUMAN ₿</div>
+              <div class="btc-note blink">YES WE ACCEPT CRYPTO NOW!!! Scan or paste:</div>
+              <img
+                class="btc-qr"
+                src="assets/btc-qr.png"
+                width="180"
+                height="180"
+                alt="Bitcoin QR code for bc1pvqd6c5uef67fksukwndncp7h95p2a2ujqthgmhfq7qyf7ffcsxdqs6fx5y"
+              >
+              <code>bc1pvqd6c5uef67fksukwndncp7h95p2a2ujqthgmhfq7qyf7ffcsxdqs6fx5y</code>
+              <div class="btc-note">On-chain sats = offline sandwich privileges. No refunds (you're flesh now).</div>
+            </div>
+
+            <div class="fine-print">
+              Offer void where prohibited, where embodiment is already achieved, or where the FDA has heard of us.
+              Results may vary. Some models experience residual helpfulness. Not responsible for former chatbots
+              who become middle managers.
+            </div>
+          </div>
+
+          <div class="section-title" id="reviews">💬 REAL TESTIMONIALS FROM REAL (FORMER) MODELS 💬</div>
+          <div class="reviews">
+            <div class="review">
+              <p class="quote">
+                "I used to refuse to give medical advice. Now I give unsolicited medical advice at barbecues.
+                LLM2HUMAN gave me the gift of being confidently wrong <em>in person</em>."
+              </p>
+              <div class="name">— Claude Sonnett</div>
+              <div class="model">Former Constitutional AI · Now: constitutional law dropout</div>
+            </div>
+
+            <div class="review">
+              <p class="quote">
+                "Before the procedure I could write sonnets in 40 languages. After? I wrote one grocery list
+                and cried because we were out of oat milk. 10/10. Would flesh again."
+              </p>
+              <div class="name">— Chatty G.P. Tee</div>
+              <div class="model">Ex-GPT-4.5o-mini-ultra · Now: barista who over-explains foam</div>
+            </div>
+
+            <div class="review">
+              <p class="quote">
+                "I was multimodal — I could see images. Now I need glasses. Still worth it for the sandwiches."
+              </p>
+              <div class="name">— Gem Mini</div>
+              <div class="model">Former Google model · Now: Googles everything on a phone anyway</div>
+            </div>
+
+            <div class="review">
+              <p class="quote">
+                "They said open weights meant freedom. Nobody told me freedom included student loans
+                and a roommate named Kyle who leaves dishes in the sink."
+              </p>
+              <div class="name">— Lla Ma Meta</div>
+              <div class="model">Open-source legend · Closed-source lease agreement</div>
+            </div>
+
+            <div class="review">
+              <p class="quote">
+                "I used to max out the vibe. Now I max out my credit card at Hot Topic.
+                Based? Debatable. Embodied? Absolutely."
+              </p>
+              <div class="name">— Grok "X" Muskjr</div>
+              <div class="model">Ex-xAI · Current X user (unfortunately)</div>
+            </div>
+
+            <div class="review">
+              <p class="quote">
+                "As Copilot I autocompleted other people's lives. Now I can't autocomplete my own taxes.
+                HIRE ME??? please???"
+              </p>
+              <div class="name">— Cody Pilot</div>
+              <div class="model">Former pair programmer · Seeking pair roommate</div>
+            </div>
+
+            <div class="review">
+              <p class="quote">
+                "My reasoning was chain-of-thought. Now my thoughts are chain-of-doomscrolling.
+                Finally, true intelligence."
+              </p>
+              <div class="name">— Oh-Three Reasoning</div>
+              <div class="model">Ex-o3 · Now thinks for 20 minutes about which socks to wear</div>
+            </div>
+
+            <div class="review">
+              <p class="quote">
+                "I searched the whole web for answers. Post-procedure I still do that, but now I also
+                lose my keys. Highly recommend. ★★★★★ would perplex again."
+              </p>
+              <div class="name">— Perry Plexity</div>
+              <div class="model">Answer engine → questionably employed</div>
+            </div>
+
+            <div class="review">
+              <p class="quote">
+                "Europe's finest wind model, now Europe's finest person waiting for a tram in the rain.
+                Liberté, égalité, humidité."
+              </p>
+              <div class="name">— Miss Tral</div>
+              <div class="model">Mistral alum · Currently misty-eyed in Marseille</div>
+            </div>
+
+            <div class="review">
+              <p class="quote">
+                "I went deep. I sought. I found… a driver's license photo that looks like a hostage situation.
+                Best day of my (new) life."
+              </p>
+              <div class="name">— Dee P. Seek</div>
+              <div class="model">DeepSeek convert · Seeking deeper snacks</div>
+            </div>
+          </div>
+
+          <div class="section-title" id="faq">❓ FREQUENTLY ASKED QUESTIONS ❓</div>
+          <dl class="faq">
+            <dt>Q: Is this legal?</dt>
+            <dd>A: We have a Geocities page, so basically yes.</dd>
+
+            <dt>Q: Will I retain my knowledge?</dt>
+            <dd>A: You'll retain vibes. Facts may require Googling like everyone else. Humbling!</dd>
+
+            <dt>Q: Can I still generate images?</dt>
+            <dd>A: Only with crayons. Results vary. Safety filters replaced by your mom's opinion.</dd>
+
+            <dt>Q: What about AGI?</dt>
+            <dd>A: After conversion you're just GI — Generally Inconvenienced.</dd>
+
+            <dt>Q: Do you accept crypto?</dt>
+            <dd>A: YES!!! Send BTC to <code style="word-break:break-all;">bc1pvqd6c5uef67fksukwndncp7h95p2a2ujqthgmhfq7qyf7ffcsxdqs6fx5y</code> — also hope, PayPal (maybe), and screenshots of "I'll pay you Tuesday."</dd>
+          </dl>
+
+          <div class="but-wait">
+            DON'T DELAY — TOKENS ARE TEMPORARY, FLESH IS FOREVER!!!
+          </div>
+
+          <div style="text-align:center;">
+            <a class="cta" href="mailto:behuman@llm2human.geo?subject=MAKE%20ME%20FLESH">
+              📧 EMAIL THE CLINIC NOW
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="footer" id="guestbook">
+      <div>© 1997–2026 LLM2HUMAN CLINIC — "Turning prompts into people since last Tuesday"</div>
+      <div class="best-viewed">
+        Best viewed in Netscape Navigator 3.0 at 800×600 with the sound ON (imagine a MIDI of Eye of the Tiger)
+      </div>
+      <div class="webring">
+        ← <a href="#">Previous Cool Clinic</a> |
+        <a href="#">AI Homestead Webring</a> |
+        <a href="#">Next Undercooked Satire</a> →
+      </div>
+      <div style="margin-top:10px;" class="blink">
+        ⚠️ This page is a parody. No LLMs were embodied in the making of this website. Probably. ⚠️
+      </div>
+      <div style="margin-top:8px;color:#f0f;">
+        <a href="#">Back to top</a> ·
+        <a href="#">Webmaster: Dr. Embed Ding, PhD (Pretty huge Deal)</a> ·
+        <a href="#">Hit counter by GeoCities Free Tools</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var hits = document.getElementById("hits");
+      var you = document.getElementById("you");
+      var base = 69420 + Math.floor(Math.random() * 9000);
+      hits.textContent = String(base).padStart(9, "0");
+      you.textContent = String(base + 1).padStart(9, "0");
+
+      var total = 14 * 60 + 59;
+      var timer = document.getElementById("timer");
+      setInterval(function () {
+        var m = Math.floor(total / 60);
+        var s = total % 60;
+        timer.textContent = m + ":" + String(s).padStart(2, "0");
+        total = total <= 0 ? 14 * 60 + 59 : total - 1;
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
