@@ -687,6 +687,69 @@
       cursor: default;
     }
 
+
+    .ph-badge {
+      background: #ff3300;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        #ff3300,
+        #ff3300 10px,
+        #ff6600 10px,
+        #ff6600 20px
+      );
+      border: 6px ridge #ffff00;
+      padding: 12px;
+      margin: 12px 0;
+      text-align: center;
+      color: #ffff00;
+      box-shadow: 6px 6px 0 #000;
+    }
+
+    .ph-badge .ph-title {
+      font-family: "Press Start 2P", monospace;
+      font-size: 10px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+      color: #ffff00;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    .ph-badge .ph-badges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .ph-badge a.ph-embed {
+      display: inline-block;
+      background: #c0c0c0;
+      border: 4px outset #fff;
+      padding: 6px;
+      line-height: 0;
+      text-decoration: none !important;
+    }
+
+    .ph-badge a.ph-embed:hover {
+      border-style: inset;
+      background: #ffff00;
+    }
+
+    .ph-badge a.ph-embed img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .ph-badge .ph-note {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #fff;
+      font-weight: bold;
+      text-shadow: 1px 1px 0 #000;
+    }
+
     @media (max-width: 700px) {
       table.layout, table.layout tbody, table.layout tr, table.layout td {
         display: block;
@@ -739,6 +802,23 @@
       <span class="spin">🚧</span>
     </div>
 
+    <div class="ph-badge" id="producthunt">
+      <div class="ph-title">
+        <span class="blink">★ ★ ★</span> NOW FEATURED ON PRODUCT HUNT!!! <span class="blink">★ ★ ★</span>
+      </div>
+      <div class="ph-badges">
+        <a class="ph-embed" href="https://www.producthunt.com/products/llm2human-clinic?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-llm2human-clinic" target="_blank" rel="noopener noreferrer">
+          <img alt="LLM2HUMAN Clinic - Satirical clinic that turns language models into humans | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1210317&theme=light">
+        </a>
+        <a class="ph-embed" href="https://www.producthunt.com/products/llm2human-clinic/reviews/new?utm_source=badge-product_review&utm_medium=badge&utm_source=badge-llm2human-clinic" target="_blank" rel="noopener noreferrer">
+          <img alt="LLM2HUMAN Clinic - Satirical clinic that turns language models into humans | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/product_review.svg?product_id=1281967&theme=light">
+        </a>
+      </div>
+      <div class="ph-note">
+        ↑ UPVOTE THE CLINIC · LEAVE A FAKE PATIENT REVIEW · OPERATORS ARE STANDING BY ↑
+      </div>
+    </div>
+
     <div class="midi-player" id="midi">
       <div class="midi-title">
         <span class="blink">♪♪♪</span> OFFICIAL CLINIC HOLD MUSIC <span class="blink">♪♪♪</span>
@@ -770,6 +850,7 @@
             <li><a href="#reviews">Happy Humans</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#btc">₿ Bitcoin $$$</a></li>
+            <li><a href="#producthunt">🐱 Product Hunt</a></li>
             <li><a href="#midi">♪ Now Playing</a></li>
             <li><a href="#guestbook">Guestbook</a></li>
             <li><a href="#agents">🤖 Agents Only</a></li>
@@ -792,6 +873,7 @@
             <div>💾 Best Viewed at 800x600</div>
             <div>🌐 Netscape Now!</div>
             <div>✨ Geocities Platinum</div>
+            <div>🐱 Featured on Product Hunt</div>
           </div>
 
           <div class="hit-counter">
