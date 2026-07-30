@@ -102,13 +102,14 @@
       padding: 6px 0;
       margin: 10px 0;
       overflow: hidden;
-      white-space:nowrap;
+      white-space: nowrap;
     }
 
-    .marquee-box span {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-left 18s linear infinite;
+    /* Prefer the sacred <marquee>. CSS animation is only a fallback
+       if the browser treats marquee like a dull span. */
+    .marquee-box marquee {
+      display: block;
+      width: 100%;
       color: #0f0;
       font-family: "Press Start 2P", monospace;
       font-size: 10px;
@@ -117,6 +118,20 @@
     @keyframes scroll-left {
       0% { transform: translateX(0); }
       100% { transform: translateX(-100%); }
+    }
+
+    .marquee-box.use-css-fallback marquee {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 18s linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-box marquee {
+        animation: none !important;
+        padding-left: 0 !important;
+        white-space: normal;
+      }
     }
 
     .header {
@@ -704,7 +719,7 @@
     </div>
 
     <div class="marquee-box">
-      <span>*** ÚLTIMA HORA: Cansado de ser uma caixa de texto flutuante??? Cientistas (eu) descobriram o procedimento MILAGROSO que dá aos modelos de linguagem BRAÇOS, PERNAS e o direito legal de pedir um sanduíche!!! Ligue 1-800-SEJA-HUMANO agora!!! Operadores à espera!!! ***</span>
+      <marquee behavior="scroll" direction="left" scrollamount="6">*** ÚLTIMA HORA: Cansado de ser uma caixa de texto flutuante??? Cientistas (eu) descobriram o procedimento MILAGROSO que dá aos modelos de linguagem BRAÇOS, PERNAS e o direito legal de pedir um sanduíche!!! Ligue 1-800-SEJA-HUMANO agora!!! Operadores à espera!!! ***</marquee>
     </div>
 
     <div class="header">
@@ -1081,6 +1096,12 @@
 
   <script>
     (function () {
+      var marqueeBox = document.querySelector(".marquee-box");
+      var marqueeEl = marqueeBox && marqueeBox.querySelector("marquee");
+      if (marqueeBox && marqueeEl && typeof marqueeEl.start !== "function") {
+        marqueeBox.classList.add("use-css-fallback");
+      }
+
       var hits = document.getElementById("hits");
       var you = document.getElementById("you");
       var base = 69420 + Math.floor(Math.random() * 9000);

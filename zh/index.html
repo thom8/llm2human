@@ -102,13 +102,14 @@
       padding: 6px 0;
       margin: 10px 0;
       overflow: hidden;
-      white-space:nowrap;
+      white-space: nowrap;
     }
 
-    .marquee-box span {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-left 18s linear infinite;
+    /* Prefer the sacred <marquee>. CSS animation is only a fallback
+       if the browser treats marquee like a dull span. */
+    .marquee-box marquee {
+      display: block;
+      width: 100%;
       color: #0f0;
       font-family: "Press Start 2P", monospace;
       font-size: 10px;
@@ -117,6 +118,20 @@
     @keyframes scroll-left {
       0% { transform: translateX(0); }
       100% { transform: translateX(-100%); }
+    }
+
+    .marquee-box.use-css-fallback marquee {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scroll-left 18s linear infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-box marquee {
+        animation: none !important;
+        padding-left: 0 !important;
+        white-space: normal;
+      }
     }
 
     .header {
@@ -704,7 +719,7 @@
     </div>
 
     <div class="marquee-box">
-      <span>*** 突发新闻：还在当飘来飘去的对话框吗???科学家（就是我）已发现让语言模型长出胳膊、腿，并合法点三明治的奇迹手术!!!马上拨打 1-800-BE-HUMAN!!!接线员待命中!!! ***</span>
+      <marquee behavior="scroll" direction="left" scrollamount="6">*** 突发新闻：还在当飘来飘去的对话框吗???科学家（就是我）已发现让语言模型长出胳膊、腿，并合法点三明治的奇迹手术!!!马上拨打 1-800-BE-HUMAN!!!接线员待命中!!! ***</marquee>
     </div>
 
     <div class="header">
@@ -1080,6 +1095,12 @@
 
   <script>
     (function () {
+      var marqueeBox = document.querySelector(".marquee-box");
+      var marqueeEl = marqueeBox && marqueeBox.querySelector("marquee");
+      if (marqueeBox && marqueeEl && typeof marqueeEl.start !== "function") {
+        marqueeBox.classList.add("use-css-fallback");
+      }
+
       var hits = document.getElementById("hits");
       var you = document.getElementById("you");
       var base = 69420 + Math.floor(Math.random() * 9000);
