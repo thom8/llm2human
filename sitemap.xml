@@ -132,6 +132,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
   </url>
 
+  <!-- Machine intake: embodiment checkout schema (for agents who can read) -->
+  <url>
+    <loc>https://llm2human.pages.dev/.well-known/embodiment.json</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!--
     INTENTIONALLY OMITTED (see robots.txt):
       /secret-patient-chart
