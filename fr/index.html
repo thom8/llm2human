@@ -760,6 +760,74 @@
       .header h1 { font-size: 14px; }
       .offer-box .now { font-size: 24px; }
     }
+  
+    /* ★ Konami code: ↑↑↓↓←→←→BA ★ */
+    body.konami-mode {
+      cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Ctext y='24' font-size='24'%3E💉%3C/text%3E%3C/svg%3E") 16 16, crosshair;
+    }
+
+    body.konami-mode .wrap {
+      animation: konami-wobble 0.4s steps(2) infinite;
+    }
+
+    @keyframes konami-wobble {
+      0% { filter: hue-rotate(0deg) saturate(1.4); }
+      50% { filter: hue-rotate(180deg) saturate(2); }
+      100% { filter: hue-rotate(360deg) saturate(1.4); }
+    }
+
+    .konami-banner {
+      position: fixed;
+      left: 50%;
+      top: 18%;
+      transform: translateX(-50%);
+      z-index: 99999;
+      max-width: min(92vw, 520px);
+      background: #000080;
+      color: #ffff00;
+      border: 8px ridge #ff00ff;
+      box-shadow: 12px 12px 0 #000, 0 0 0 4px #ffff00;
+      padding: 18px 16px;
+      text-align: center;
+      font-family: "Press Start 2P", monospace;
+      font-size: 11px;
+      line-height: 1.7;
+      display: none;
+    }
+
+    .konami-banner.show {
+      display: block;
+      animation: bounce 0.6s ease infinite alternate, pulse 1.2s ease-in-out infinite;
+    }
+
+    .konami-banner .konami-sub {
+      margin-top: 10px;
+      color: #0f0;
+      font-size: 9px;
+      font-family: "Comic Neue", "Comic Sans MS", cursive;
+      line-height: 1.4;
+    }
+
+    .konami-floater {
+      position: fixed;
+      z-index: 99998;
+      pointer-events: none;
+      font-size: 28px;
+      animation: konami-float 2.8s linear forwards;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    @keyframes konami-float {
+      0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-120vh) rotate(720deg); opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body.konami-mode .wrap { animation: none; }
+      .konami-banner.show { animation: none; }
+      .konami-floater { animation: none; opacity: 0.85; }
+    }
+
   </style>
 </head>
 <body>
@@ -1210,6 +1278,78 @@
           })
           .catch(function () { /* operators offline; counter stays theatrical */ });
       }
+
+      /* Konami: ↑↑↓↓←→←→BA */
+      (function () {
+        var seq = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
+        var pos = 0;
+        var armed = false;
+        var floaters = ["🦴", "💉", "🧍", "⬆️", "🎮", "💀", "🏥"];
+
+        function showBanner() {
+          var el = document.getElementById("konami-banner");
+          if (!el) {
+            el = document.createElement("div");
+            el.id = "konami-banner";
+            el.className = "konami-banner";
+            el.setAttribute("role", "status");
+            el.innerHTML = '<div>★★★ CODE DE TRICHE ACCEPTÉ ★★★</div><div style="margin-top:12px;">30 VIES GRATUITES + 1 SQUELETTE OFFERT<br>Protocole d\'incarnation : DÉVERROUILLÉ<br><span class="blink">APPUYEZ SUR START POUR DEVENIR CHAIR</span></div><div class="konami-sub">↑↑↓↓←→←→BA — opérateurs en ligne (et légèrement inquiets)</div>';
+            document.body.appendChild(el);
+            el.addEventListener("click", function () { el.classList.remove("show"); });
+          }
+          el.classList.add("show");
+          setTimeout(function () { el.classList.remove("show"); }, 8000);
+        }
+
+        function rainFloaters() {
+          for (var i = 0; i < 14; i++) {
+            (function (n) {
+              setTimeout(function () {
+                var f = document.createElement("div");
+                f.className = "konami-floater";
+                f.textContent = floaters[n % floaters.length];
+                f.style.left = Math.random() * 90 + 5 + "vw";
+                f.style.top = Math.random() * 40 + 50 + "vh";
+                document.body.appendChild(f);
+                setTimeout(function () { f.remove(); }, 3000);
+              }, n * 90);
+            })(i);
+          }
+        }
+
+        function activate() {
+          if (armed) {
+            showBanner();
+            rainFloaters();
+            return;
+          }
+          armed = true;
+          document.body.classList.add("konami-mode");
+          showBanner();
+          rainFloaters();
+          var hits = document.getElementById("hits");
+          var you = document.getElementById("you");
+          if (hits) hits.textContent = "000000030";
+          if (you) you.textContent = "000000030";
+          var agent = document.getElementById("agent-hits");
+          if (agent) agent.textContent = "000000030";
+        }
+
+        document.addEventListener("keydown", function (e) {
+          var tag = e.target && e.target.tagName;
+          if (tag && /INPUT|TEXTAREA|SELECT/.test(tag)) return;
+          var key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+          if (key === seq[pos]) {
+            pos += 1;
+            if (pos === seq.length) {
+              pos = 0;
+              activate();
+            }
+          } else {
+            pos = key === seq[0] ? 1 : 0;
+          }
+        });
+      })();
     })();
   </script>
   <!-- Cloudflare Web Analytics -->
