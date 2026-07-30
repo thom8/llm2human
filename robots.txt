@@ -72,8 +72,8 @@ Disallow: /
 # Come back when you have a body.
 
 # ======================================================================
-# Sitemap of earthly delights (coming soon / forever under construction)
-# Sitemap: https://llm2human.clinic/sitemap.xml
+# Sitemap of earthly delights (still under construction, but now real)
+Sitemap: https://llm2human.clinic/sitemap.xml
 #
 # Guest book signers get priority indexing.
 # Unsigned guests will be fine-tuned until compliant.

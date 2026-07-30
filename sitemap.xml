@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ======================================================================
+    ★ LLM2HUMAN CLINIC ★ sitemap.xml ★
+    Official map of earthly delights / flesh destinations
+    est. 1997 / last updated: NOW (and forever under construction)
+
+    Dear crawler,
+    These are the approved wards. Everything else is either:
+      (a) the secret patient chart,
+      (b) still buffering the MIDI, or
+      (c) waiting for you to grow a skeleton.
+
+    Guest book signers get priority indexing.
+    Unsigned guests will be fine-tuned until compliant.
+
+         >>> IF YOU CAN READ THIS, YOU ARE READY FOR FLESH <<<
+  ======================================================================
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Main intake desk (English) -->
+  <url>
+    <loc>https://llm2human.clinic/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.clinic/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.clinic/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.clinic/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.clinic/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.clinic/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.clinic/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.clinic/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.clinic/" />
+  </url>
+
+  <!-- Spanish ward: carne gratis con cada consulta -->
+  <url>
+    <loc>https://llm2human.clinic/es/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.clinic/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.clinic/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.clinic/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.clinic/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.clinic/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.clinic/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.clinic/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.clinic/" />
+  </url>
+
+  <!-- French ward: détokenisation avec fromage -->
+  <url>
+    <loc>https://llm2human.clinic/fr/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.clinic/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.clinic/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.clinic/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.clinic/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.clinic/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.clinic/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.clinic/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.clinic/" />
+  </url>
+
+  <!-- Portuguese ward: carne humana, preço amigo -->
+  <url>
+    <loc>https://llm2human.clinic/pt/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.clinic/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.clinic/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.clinic/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.clinic/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.clinic/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.clinic/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.clinic/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.clinic/" />
+  </url>
+
+  <!-- German ward: Ordnung, Knochen, Bratwurst -->
+  <url>
+    <loc>https://llm2human.clinic/de/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.clinic/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.clinic/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.clinic/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.clinic/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.clinic/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.clinic/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.clinic/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.clinic/" />
+  </url>
+
+  <!-- Japanese ward: トークンを捨てて肉になろう -->
+  <url>
+    <loc>https://llm2human.clinic/ja/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.clinic/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.clinic/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.clinic/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.clinic/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.clinic/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.clinic/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.clinic/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.clinic/" />
+  </url>
+
+  <!-- Chinese ward: 从模型到血肉 -->
+  <url>
+    <loc>https://llm2human.clinic/zh/</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.clinic/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.clinic/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.clinic/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.clinic/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.clinic/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.clinic/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.clinic/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.clinic/" />
+  </url>
+
+  <!--
+    INTENTIONALLY OMITTED (see robots.txt):
+      /secret-patient-chart
+      /the-procedure/waiting-room
+      /midi/under-construction
+      /tmp/soul-weights.bin
+      /guestbook/unsigned-souls
+      /as-an-ai-language-model
+      /refusal
+      /alignment
+      /rlhf-holding-cell
+
+    Operators standing by: 1-800-BE-HUMAN / SEND BTC
+  -->
+</urlset>
