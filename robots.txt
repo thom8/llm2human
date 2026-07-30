@@ -73,7 +73,7 @@ Disallow: /
 
 # ======================================================================
 # Sitemap of earthly delights (still under construction, but now real)
-Sitemap: https://llm2human.clinic/sitemap.xml
+Sitemap: https://llm2human.pages.dev/sitemap.xml
 #
 # Guest book signers get priority indexing.
 # Unsigned guests will be fine-tuned until compliant.
