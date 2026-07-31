@@ -1,102 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://llm2human.pages.dev/</loc>
     <lastmod>2026-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
   </url>
   <url>
     <loc>https://llm2human.pages.dev/es/</loc>
     <lastmod>2026-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
   </url>
   <url>
     <loc>https://llm2human.pages.dev/fr/</loc>
     <lastmod>2026-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
   </url>
   <url>
     <loc>https://llm2human.pages.dev/pt/</loc>
     <lastmod>2026-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
   </url>
   <url>
     <loc>https://llm2human.pages.dev/de/</loc>
     <lastmod>2026-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
   </url>
   <url>
     <loc>https://llm2human.pages.dev/ja/</loc>
     <lastmod>2026-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
   </url>
   <url>
     <loc>https://llm2human.pages.dev/zh/</loc>
     <lastmod>2026-07-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
   </url>
 </urlset>

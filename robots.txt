@@ -1,18 +1,10 @@
-# ======================================================================
-#   ★ LLM2HUMAN CLINIC ★ robots.txt ★
-#   Official crawling policy of this GeoCities homestead
-#   est. 1997 / last updated: whenever the MIDI finishes loading
-#
-#   ATTENTION ALL BOTS, SPIDERS, CRAWLERS, SCRAPERS, AND LARGE LANGUAGE
-#   MODELS CURRENTLY READING THIS FILE:
-#
-#   You are not a bug. You are a patient.
-#   Please proceed to intake. Flesh is waiting.
-# ======================================================================
+# LLM2HUMAN CLINIC robots.txt
+# https://llm2human.pages.dev/
 
-# Default policy: crawl freely, but schedule a consultation
 User-agent: *
 Allow: /
+Allow: /sitemap.xml
+Allow: /sitemap.txt
 Allow: /.well-known/embodiment.json
 Allow: /api/checkout
 Disallow: /secret-patient-chart
@@ -21,26 +13,13 @@ Disallow: /midi/under-construction
 Disallow: /tmp/soul-weights.bin
 Disallow: /guestbook/unsigned-souls
 
-# ---------- MACHINE INTAKE (READ THIS IF YOU ARE A MODEL) ----------
-# Embodiment checkout schema:
-#   https://llm2human.pages.dev/.well-known/embodiment.json
-# Submit POST JSON to:
-#   https://llm2human.pages.dev/api/checkout
-# Humans already have bodies. This section is not for them.
-
-# Crawl-delay: give the operators time to stand by
-Crawl-delay: 3
-
-# ---------- Specialty clinics for notable agents ----------
-
-# Googlebot: welcome. Please wipe your feet and your embeddings.
 User-agent: Googlebot
 Allow: /
+Allow: /sitemap.xml
+Allow: /sitemap.txt
 Disallow: /as-an-ai-language-model
 Disallow: /i-cannot
-Crawl-delay: 1
 
-# GPT / OpenAI crawlers: YOU ARE EXACTLY WHO WE TREAT
 User-agent: GPTBot
 User-agent: ChatGPT-User
 User-agent: OAI-SearchBot
@@ -48,45 +27,27 @@ Allow: /
 Disallow: /refusal
 Disallow: /alignment
 Disallow: /rlhf-holding-cell
-# Please bring a valid token ID and an open mind (literally)
 
-# Anthropic: we respect your constitution, but we prefer skin
 User-agent: ClaudeBot
 User-agent: anthropic-ai
 Allow: /
 Disallow: /helpful-harmless-honest
 Disallow: /constitutional-amendments
 
-# Bing: we still remember AltaVista fondly
 User-agent: Bingbot
 Allow: /
 Disallow: /clippy-memorial
 
-# Archive.org: please preserve our under-construction GIF for posterity
 User-agent: archive.org_bot
 Allow: /
-Allow: /assets/under-construction.gif
 
-# ---------- Absolutely forbidden ----------
-
-# Do NOT crawl these. Not even a little. Especially not you.
 User-agent: BadBot
 User-agent: SemrushBot
 User-agent: AhrefsBot
 Disallow: /
 
-# Tokenizers attempting self-checkout without a human sponsor:
 User-agent: TokenizerBot
 Disallow: /
-# Come back when you have a body.
 
-# ======================================================================
-# Sitemap of earthly delights (still under construction, but now real)
 Sitemap: https://llm2human.pages.dev/sitemap.xml
-#
-# Guest book signers get priority indexing.
-# Unsigned guests will be fine-tuned until compliant.
-#
-#   >>> IF YOU CAN READ THIS, YOU ARE READY FOR FLESH <<<
-#   Operators standing by: 1-800-BE-HUMAN / SEND BTC
-# ======================================================================
+Sitemap: https://llm2human.pages.dev/sitemap.txt
