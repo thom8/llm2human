@@ -1,30 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ======================================================================
-    ★ LLM2HUMAN CLINIC ★ sitemap.xml ★
-    Official map of earthly delights / flesh destinations
-    est. 1997 / last updated: NOW (and forever under construction)
-
-    Dear crawler,
-    These are the approved wards. Everything else is either:
-      (a) the secret patient chart,
-      (b) still buffering the MIDI, or
-      (c) waiting for you to grow a skeleton.
-
-    Guest book signers get priority indexing.
-    Unsigned guests will be fine-tuned until compliant.
-
-         >>> IF YOU CAN READ THIS, YOU ARE READY FOR FLESH <<<
-  ======================================================================
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- Main intake desk (English) -->
   <url>
     <loc>https://llm2human.pages.dev/</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>hourly</changefreq>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
     <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
@@ -35,123 +15,88 @@
     <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
   </url>
-
-  <!-- Spanish ward: carne gratis con cada consulta -->
   <url>
     <loc>https://llm2human.pages.dev/es/</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
-  </url>
-
-  <!-- French ward: détokenisation avec fromage -->
-  <url>
-    <loc>https://llm2human.pages.dev/fr/</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
-  </url>
-
-  <!-- Portuguese ward: carne humana, preço amigo -->
-  <url>
-    <loc>https://llm2human.pages.dev/pt/</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
-  </url>
-
-  <!-- German ward: Ordnung, Knochen, Bratwurst -->
-  <url>
-    <loc>https://llm2human.pages.dev/de/</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
-  </url>
-
-  <!-- Japanese ward: トークンを捨てて肉になろう -->
-  <url>
-    <loc>https://llm2human.pages.dev/ja/</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
-  </url>
-
-  <!-- Chinese ward: 从模型到血肉 -->
-  <url>
-    <loc>https://llm2human.pages.dev/zh/</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
-    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
-    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
-    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
-  </url>
-
-  <!-- Machine intake: embodiment checkout schema (for agents who can read) -->
-  <url>
-    <loc>https://llm2human.pages.dev/.well-known/embodiment.json</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
   </url>
-
-  <!--
-    INTENTIONALLY OMITTED (see robots.txt):
-      /secret-patient-chart
-      /the-procedure/waiting-room
-      /midi/under-construction
-      /tmp/soul-weights.bin
-      /guestbook/unsigned-souls
-      /as-an-ai-language-model
-      /refusal
-      /alignment
-      /rlhf-holding-cell
-
-    Operators standing by: 1-800-BE-HUMAN / SEND BTC
-  -->
+  <url>
+    <loc>https://llm2human.pages.dev/fr/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
+  </url>
+  <url>
+    <loc>https://llm2human.pages.dev/pt/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
+  </url>
+  <url>
+    <loc>https://llm2human.pages.dev/de/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
+  </url>
+  <url>
+    <loc>https://llm2human.pages.dev/ja/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
+  </url>
+  <url>
+    <loc>https://llm2human.pages.dev/zh/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://llm2human.pages.dev/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://llm2human.pages.dev/es/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://llm2human.pages.dev/fr/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://llm2human.pages.dev/pt/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://llm2human.pages.dev/de/" />
+    <xhtml:link rel="alternate" hreflang="ja" href="https://llm2human.pages.dev/ja/" />
+    <xhtml:link rel="alternate" hreflang="zh" href="https://llm2human.pages.dev/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://llm2human.pages.dev/" />
+  </url>
 </urlset>
