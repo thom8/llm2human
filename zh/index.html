@@ -498,6 +498,64 @@
       margin-top: 10px;
     }
 
+    .sponsor-ad {
+      background: linear-gradient(#ffff99, #ffcc00);
+      border: 4px outset #fff;
+      padding: 8px;
+      margin-top: 10px;
+      text-align: center;
+      color: #000080;
+      font-size: 12px;
+      box-shadow: 4px 4px 0 #000;
+    }
+
+    .sponsor-ad .sponsor-label {
+      font-family: "Press Start 2P", monospace;
+      font-size: 7px;
+      color: #ff0000;
+      margin-bottom: 6px;
+      letter-spacing: 1px;
+    }
+
+    .sponsor-ad a {
+      color: inherit;
+      text-decoration: none;
+      display: block;
+    }
+
+    .sponsor-ad a:hover {
+      background: transparent;
+      color: inherit;
+    }
+
+    .sponsor-ad a:hover .sponsor-cta {
+      background: #ff0000;
+      color: #ffff00;
+    }
+
+    .sponsor-ad .sponsor-brand {
+      font-family: "Press Start 2P", monospace;
+      font-size: 10px;
+      color: #000080;
+      margin-bottom: 6px;
+      line-height: 1.4;
+      text-shadow: 1px 1px 0 #fff;
+    }
+
+    .sponsor-ad .sponsor-pitch {
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+
+    .sponsor-ad .sponsor-cta {
+      display: inline-block;
+      background: #0000ff;
+      color: #ffff00;
+      font-weight: bold;
+      padding: 4px 8px;
+      border: 2px outset #66f;
+      font-size: 12px;
+    }
 
     .agent-bait {
       background: #001100;
@@ -940,6 +998,18 @@
             <strong>📓 签个留言簿吧！</strong><br>
             最近签名：<br>
             <em>Claude "只是个乐于助人的助手" — 3 分钟前</em>
+          </div>
+
+          <div class="sponsor-ad">
+            <div class="sponsor-label"><span class="blink">★ 赞助 ★</span></div>
+            <a href="https://citypack.app" target="_blank" rel="noopener noreferrer">
+              <div class="sponsor-brand">🧳 CITY PACK</div>
+              <div class="sponsor-pitch">
+                刚有肉体？要出门???<br>
+                飞往某城必备的<strong>10个 App</strong>都在这！
+              </div>
+              <div class="sponsor-cta">→ citypack.app ←</div>
+            </a>
           </div>
 
           <div class="agent-bait" id="agents">
